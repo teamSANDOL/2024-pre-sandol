@@ -47,19 +47,22 @@
 
 #### 출력 예시
 ```json
-{'result': 
- {
- '당고개행 - 신길온천방면': ['전역 도착'], 
- '왕십리행 - 신길온천방면': ['[10]번째 전역 (송도)'], 
- '오이도행 - 오이도방면': ['정왕 진입'], 
- '인천행 - 오이도방면': ['[3]번째 전역 (초지)']
- }, 'status': 'success'}
-
+{
+  "result": {
+    "당고개행 - 신길온천방면": ["Approaching Destination"],
+    "왕십리행 - 신길온천방면": ["Approaching Songdo Station"],
+    "오이도행 - 오이도방면": ["Approaching Jeongwang"],
+    "인천행 - 오이도방면": ["Approaching Choji"]
+  },
+  "status": "success"
+}
 ```
 
 #### 출력 예시2
 ```json
-{error : "[Error] 데이터를 받아오지 못했습니다."}
+{
+	"error" : "[Error] 데이터를 받아오지 못했습니다."
+}
 ```
 
 ## 마케터
