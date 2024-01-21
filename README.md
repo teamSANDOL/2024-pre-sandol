@@ -1,3 +1,5 @@
+![](https://github.com/teamSANDOL/kpu_sandol_team/blob/main/img/logo_profile3.png?raw=true)
+
 # 미션
 ---
 ## 개발자
@@ -65,6 +67,13 @@
 }
 ```
 
+### 주의사항
+- 주어진 파일의 `main`의 `app_main`에 만든 기능을 통합하여 출력예시를 반환한다.
+- 주어진 파일의 `web_crawler`의 `load_data`에서 크롤링을 하는 비즈니스 로직을 구성한다.
+- 추가로 파일이 필요하다면 생성해도 무관하나 제공된 함수명 등을 수정해선 안된다.
+
+### 테스트
+- test에 integration_test를 실행시켜 모든 테스트를 성공한다.
 ## 마케터
 #### 요구사항
 

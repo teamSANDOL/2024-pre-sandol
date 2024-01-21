@@ -4,11 +4,11 @@ if __name__ == '__main__':
 
     path.append(os.path.dirname(__file__))
 
-from main import app_main
+from business_dev.main import app_main
 from unittest import TestCase
 import json
 
-TEST_JSON_PATH = r"week1/resource/RawSubwayArrival.json"
+TEST_JSON_PATH = r"week1/business_dev/resource/RawSubwayArrival.json"
 
 
 class Test(TestCase):
