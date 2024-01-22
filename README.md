@@ -123,7 +123,7 @@
 - 즉, 정적인 컨텐츠를 만드는데 사용됩니다.
 - 스킬탭은 동적인 컨텐츠를 만드는데 사용됩니다. 웹서버와 연동하여 개발자가 응답을 자유롭게 생성할 수 있습니다.
 
-초대해드린 테스트 봇을 산돌이와 최대한 비슷하게 시나리오 및 블럭을 구성하면 됩니다.
+초대해드린 [테스트 봇](https://i.kakao.com/bot/5ff710328c008e4e081b2f92/intent/new?scenarioId=default)을 산돌이와 최대한 비슷하게 시나리오 및 블럭을 구성하면 됩니다.
 
 ![openbuilder_example1.png](resource%2Fimg%2Fopenbuilder_example1.png)
 
