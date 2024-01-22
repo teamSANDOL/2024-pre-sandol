@@ -146,6 +146,6 @@ print(content['status'])
 
 ### FacadeJSON
 ```python
-content = json.loads(f)
+content = FacadeJSON(json.loads(f))
 print(content.status)
 ```
