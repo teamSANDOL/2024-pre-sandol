@@ -126,6 +126,10 @@
 - 과제 완료시 pr을 날려 과제를 제출한다.
 
 # 기타
+## 테스트 실행방법
+- 각 테스트는 `\test\integration_test`로 지정되어 있습니다. 해당 파일을 실행시키시면 pycharm기준 하단 파이썬 콘솔에 성공/실패여부가 자세하게 나옵니다.
+- ![](resource/img/test_screenshot1.png)
+- ![test_screenshot2.png](resource%2Fimg%2Ftest_screenshot2.png)
 ## Flask 실행 법
 ```
 api_dev/의 위치에서 flask run을 실행한다.
