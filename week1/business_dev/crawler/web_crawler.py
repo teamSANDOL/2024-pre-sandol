@@ -3,5 +3,5 @@ FILE_PATH = r"http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStatio
 
 
 def load_data() -> json:
-    # result = ""
+    result = ""
     return json.loads(result)
