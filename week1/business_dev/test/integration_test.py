@@ -1,14 +1,20 @@
-if __name__ == '__main__':
-    from sys import path
-    import os
+# if __name__ == '__main__':
+#     from sys import path
+#     import os
+#
+#     path.append(os.path.dirname(__file__))
 
-    path.append(os.path.dirname(__file__))
-
+import os
 from ..main import app_main
 from unittest import TestCase
 import json
 
-TEST_JSON_PATH = r"week1/resource/RawSubwayArrival.json"
+TEST_JSON_PATH = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)),
+    "../..",
+    "resource",
+    "RAWSubwayArrival.json"
+)
 
 
 class Test(TestCase):
