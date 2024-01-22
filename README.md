@@ -1,5 +1,4 @@
 ![](https://github.com/teamSANDOL/kpu_sandol_team/blob/main/img/logo_profile3.png?raw=true)
-
 # 미션
 ---
 ## 개발자
@@ -14,21 +13,57 @@
 - 제출 전 테스트 파일에 있는 모든 테스트를 통과하여야 한다.
 	- [PyCharm에서 테스트를 실행하는 방법](https://www.jetbrains.com/help/pycharm/testing-your-first-python-application.html#write-test)
 	- [Python unittest 라이브러리 docs](https://docs.python.org/ko/3/library/unittest.html)
-- 요구사항에 없는 기능은 스스로 판단하여 구현한다.
+- **요구사항에 없는 기능은 스스로 판단하여 구현한다.**
+- API 개발 미션에 한하여 `utility/Frozen`사용이 가능하다. 사용법은 해당 문서 최 하단에 있다.
 
 ### API 개발
 #### 요구사항
 - 산돌이에서는 통학하는 학생들을 위해 지하철 도착정보를 알려주고 있다. 기능개발팀에서 서울시 공공데이터포털의 오픈API를 가공하여 API 개발팀에게 넘겨주었다. 가공된 JSON데이터는 `/resource/subway`에 저장되어있으며 학생들이 보기 편하도록 데이터를 가공하여 kakao-i openbuilder에서 요구하는 형식(텍스트)로 JSON 데이터를 가공하여 출력한다.
+- 중복되는 JSON Wrapper의 경우 따로 처리할 방법을 고민한다.
 
 #### 입력 예시
-```text
-제공된 json파일을 확인한다
+```json
+{'result': 
+ {
+ '당고개행 - 신길온천방면': ['전역 도착'], 
+ '왕십리행 - 신길온천방면': ['[10]번째 전역 (송도)'], 
+ '오이도행 - 오이도방면': ['정왕 진입'], 
+ '인천행 - 오이도방면': ['[3]번째 전역 (초지)']
+ }, 'status': 'success'}
 ```
 
 #### 출력 예시
 ```json
-
+{
+    "version": "2.0",
+    "template": {
+        "outputs": [
+            {
+                "simpleImage": {
+                    "imageUrl": "https://t1.kakaocdn.net/openbuilder/sample/lj3JUcmrzC53YIjNDkqbWK.jpg",
+                    "altText": "<<이하 텍스트 예시>>"
+                }
+            }
+        ]
+    }
+}
 ```
+
+#### 출력 예시2
+- 유효하지 않은 디렉터리 또는 값을 받아오지 못하는 경우 다음과 같은 오류 메시지를 출력한다.
+```json
+{error : "[Error] 데이터를 받아오지 못했습니다."}
+```
+
+#### 텍스트 예시
+```text
+현재 정왕역의 열차 도착 정보를 알려드릴게요!
+[당고개행 - 신길온천방면] : 전역 도착 
+[왕십리행 - 신길온천방면] : [10]번째 전역 (송도) 
+[오이도행 - 오이도방면] : 정왕 진입
+[인천행 - 오이도방면] : [3]번째 전역 (초지)
+```
+
 
 ---
 ### 기능 개발
@@ -49,37 +84,52 @@
 
 #### 출력 예시
 ```json
-{
-  "result": {
-    "당고개행 - 신길온천방면": ["Approaching Destination"],
-    "왕십리행 - 신길온천방면": ["Approaching Songdo Station"],
-    "오이도행 - 오이도방면": ["Approaching Jeongwang"],
-    "인천행 - 오이도방면": ["Approaching Choji"]
-  },
-  "status": "success"
-}
+{'result': 
+ {
+ '당고개행 - 신길온천방면': ['전역 도착'], 
+ '왕십리행 - 신길온천방면': ['[10]번째 전역 (송도)'], 
+ '오이도행 - 오이도방면': ['정왕 진입'], 
+ '인천행 - 오이도방면': ['[3]번째 전역 (초지)']
+ }, 'status': 'success'}
+
 ```
 
 #### 출력 예시2
 ```json
-{
-	"error" : "[Error] 데이터를 받아오지 못했습니다."
-}
+{error : "[Error] 데이터를 받아오지 못했습니다."}
 ```
 
-### 주의사항
-- 주어진 파일의 `main`의 `app_main`에 만든 기능을 통합하여 출력예시를 반환한다.
-- 주어진 파일의 `web_crawler`의 `load_data`에서 크롤링을 하는 비즈니스 로직을 구성한다.
-- 추가로 파일이 필요하다면 생성해도 무관하나 제공된 함수명 등을 수정해선 안된다.
-
-### 테스트
-- test에 integration_test를 실행시켜 모든 테스트를 성공한다.
 ## 마케터
 #### 요구사항
-
+- 추후 전달
 
 ---
 # 제출 방법
 - 제출 마감 기한은 1월 26일 금요일 오후 17:00까지이다.
 - 레포지토리를 fork 하여 가져온 뒤, `1-{name}`으로 브랜치를 생성하여 개발한다.  
 - 과제 완료시 pr을 날려 과제를 제출한다.
+
+# 기타
+## Flask 실행 법
+```
+api_dev/의 위치에서 flask run을 실행한다.
+만약 "You did not provide the "FLASK_APP" environment variable"과 같은 오류 발생시 환경변수 설정(하단)을 따른다
+```
+
+### 환경변수 설정
+- https://teki.tistory.com/37
+- `set FLASK_APP = app`을 실행 한뒤 서버를 실행시킨다.
+
+## FacadeJSON
+- 파이썬에서 JSON을 편하게 사용할 수 있도록 도와주는 (제작된)라이브러리
+### 기존 사용법
+```python
+content = json.loads(f)
+print(content['status'])
+```
+
+### FacadeJSON
+```python
+content = json.loads(f)
+print(content.status)
+```
