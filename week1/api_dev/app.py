@@ -1,7 +1,7 @@
 import requests
+import os
 from flask import Flask
 import json
-import os
 from utility.frozen_json import FacadeJSON
 
 app = Flask(__name__)
@@ -33,5 +33,17 @@ def __load_json(path):
     return raw
 
 
+def __generate_response_body():
+    return {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+            ]
+        }
+    }
+
+
 if __name__ == "__main__":
+    app.config['FLASK_APP'] = 'run'
+    app.config['DEBUG'] = True
     app.run()

@@ -5,7 +5,7 @@
 #     path.append(os.path.dirname(__file__))
 
 import os
-from ..main import app_main
+from week1.business_dev.main import app_main
 from unittest import TestCase
 import json
 
