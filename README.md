@@ -117,7 +117,15 @@
 
 ## 마케터
 #### 요구사항
-- 추후 전달
+- 산돌이는 kakao i openbuilder로 제작되어 있습니다. 이는 챗봇 관리자들이 간편하게 챗봇의 기능을 만들 수 있도록 구성되어있습니다.
+- 오픈빌더는 크게 시나리오탭과 스킬탭으로 구성되어있는데 시나리오에서 산돌이의 기능 블록을 만들 수 있습니다.
+- 예를들어 산돌이에 `셔틀`이라는 발화를 하면 봇 응답을 지정할 수 있습니다.
+- 즉, 정적인 컨텐츠를 만드는데 사용됩니다.
+- 스킬탭은 동적인 컨텐츠를 만드는데 사용됩니다. 웹서버와 연동하여 개발자가 응답을 자유롭게 생성할 수 있습니다.
+
+초대해드린 테스트 봇을 산돌이와 최대한 비슷하게 시나리오 및 블럭을 구성하면 됩니다.
+
+![openbuilder_example1.png](resource%2Fimg%2Fopenbuilder_example1.png)
 
 ---
 # 제출 방법
@@ -127,7 +135,8 @@
 
 # 기타
 ## 테스트 실행방법
-- 각 테스트는 `\test\integration_test`로 지정되어 있습니다. 해당 파일을 실행시키시면 pycharm기준 하단 파이썬 콘솔에 성공/실패여부가 자세하게 나옵니다.
+- business에 대한 테스트는 `\tests\test\integration_test`로 지정되어 있습니다. 해당 파일을 실행시키시면 pycharm기준 하단 파이썬 콘솔에 성공/실패여부가 자세하게 나옵니다.
+- api에 대한 테스트는 `\tests\api_test\FlaskTestCase`에 있습니다.
 - ![](resource/img/test_screenshot1.png)
 - ![test_screenshot2.png](resource%2Fimg%2Ftest_screenshot2.png)
 ## Flask 실행 법
