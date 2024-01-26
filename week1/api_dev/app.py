@@ -3,8 +3,9 @@ import os
 from flask import Flask
 import json
 from utility.frozen_json import FacadeJSON
-
+from utility.result_wrapper import add_text_element
 app = Flask(__name__)
+
 
 
 @app.route('/')
@@ -14,8 +15,10 @@ def root():
 
 @app.route('/subway')
 def subway_info():
-    content = FacadeJSON(__load_json(PATH))
-    return content.status
+    body = __generate_response_body()
+    content = __load_json(PATH)
+    add_text_element(body, content)
+    return add_text_element(body, content)
 
 
 PATH = os.path.join(
@@ -44,6 +47,4 @@ def __generate_response_body():
 
 
 if __name__ == "__main__":
-    app.config['FLASK_APP'] = 'run'
-    app.config['DEBUG'] = True
     app.run()
