@@ -1,12 +1,12 @@
-import requests # noqa
+import requests # type: ignore # noqa
 import os
 from typing import Any, Union
 from flask import Flask, jsonify
 import json
 
-from utility.result_wrapper import add_text_element  # noqa
-from utility.frozen_json import FacadeJSON  # noqa
-from kakao import SimpleTextTemplate
+from utility.result_wrapper import add_text_element  # type: ignore # noqa 
+from utility.frozen_json import FacadeJSON  # type: ignore # noqa
+from kakao import SimpleTextTemplate  # type: ignore
 
 app = Flask(__name__)
 
