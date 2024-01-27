@@ -47,9 +47,8 @@
     "template": {
         "outputs": [
             {
-                "simpleImage": {
-                    "imageUrl": "https://t1.kakaocdn.net/openbuilder/sample/lj3JUcmrzC53YIjNDkqbWK.jpg",
-                    "altText": "<<이하 텍스트 예시>>"
+                "simpleText": {
+                    "text": "<<이하 텍스트 예시>>"
                 }
             }
         ]
