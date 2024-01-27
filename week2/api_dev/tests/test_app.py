@@ -56,3 +56,14 @@ class Test(TestCase):
             response_data = FacadeJSON(json.loads(response.data.decode('utf-8')))
             result_text = response_data.response.template.to_json()["outputs"][0]["simpleText"]["text"]
             self.assertIn("[ERROR]", result_text)
+
+    def test_result_file(self):
+        with open(os.path.join(self.base, "../..", "repo", "menu.json"), "r") as f:
+            load = json.load(f)
+
+        with open(os.path.join(self.base, "correction_test.json"), "r") as rf:
+            res_load = json.load(rf)
+
+        names = [store["name"] for store in load["store"]]
+
+        self.assertIn(res_load['action']['params']['store_name'], names)
