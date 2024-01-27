@@ -1,5 +1,5 @@
 legacy
 .idea
-business_dev/legacy/
-api_dev/legacy/
+week2/api_dev/ref
+week2/business_dev/ref
 *.pyc
