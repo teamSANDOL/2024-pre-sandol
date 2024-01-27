@@ -122,8 +122,15 @@ source .venv/bin/activate
 from unittest import TestCase
 from ..main import run
 ```
-- ![](../resource/img/test_screenshot1.png)
+또는 working directory를 수정하는 방법이 있는데 아래 과정을 따른다.
+단, pycharm 기준으로 설명한다.
+1. 메뉴 > 실행 > 구성 편집![test_screenshot0.png](resource%2Fimg%2Ftest_screenshot0.png)
+2. 왼쪽에 실행시킬 테스트 파일 선택 후 작업 디렉터리를 `\week2`로 설정![test_screenshot0-1.png](resource%2Fimg%2Ftest_screenshot0-1.png)
+
+테스트 후 성공 실패 여부 확인 위에서부터 (실패, 성공)
+- ![test_screenshot1.png](resource%2Fimg%2Ftest_screenshot1.png)
 - ![test_screenshot2.png](resource%2Fimg%2Ftest_screenshot2.png)
+
 ## Flask 실행 법
 ```
 api_dev/의 위치에서 flask run을 실행한다.
