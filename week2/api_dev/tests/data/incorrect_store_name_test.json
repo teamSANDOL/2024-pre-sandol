@@ -1,0 +1,16 @@
+{
+  "bot": {
+    "id": "5e0d180affa74800014bd33d",
+    "name": "산돌이"
+  },
+  "action": {
+    "name": "jp1j2gy39h",
+    "clientExtra": null,
+    "params": {
+      "store_name": "산돌 샌드위치",
+      "lunch_menu": "떡볶이, 순대, 튀김",
+      "dinner_menu": "짜장면, 짬뽕국, 탕수육"
+    },
+    "id": "bwjfe6fxc96ngv9ra6dddzah"
+  }
+}

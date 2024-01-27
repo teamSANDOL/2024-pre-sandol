@@ -1,0 +1,16 @@
+{
+  "bot": {
+    "id": "5e0daweraffa74800sda33d",
+    "name": "산돌이"
+  },
+  "action": {
+    "name": "jp1j2gy39h",
+    "clientExtra": null,
+    "params": {
+      "store_name": "티노 샌드위치",
+      "lunch_menu": "이탈리안 샌드위치, 불고기 샌드위치",
+      "dinner_menu": "휴업"
+    },
+    "id": "bwjfe6fxc96ngv9ra6dddzah"
+  }
+}
