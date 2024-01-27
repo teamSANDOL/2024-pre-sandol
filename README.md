@@ -19,6 +19,17 @@
 
 
 ### API 개발
+
+#### Flask 실행법 및 파일 구조
+##### Flask
+- 제시된 파일에는 `\week2\api_dev\.venv`에 가상환경이 구성되어있다.
+- 아래 명령어로 가상환경에 진입한다.(mac 기준)
+- 윈도우의 경우 [해당 링크](https://hcnoh.github.io/2019-06-19-windows-python-virtualenv)의 설명을 따른다.
+- 이후 app.py를 실행시키면 자동으로 서버가 실행될 것이다.
+
+```shell
+source .venv/bin/activate
+```
 #### 요구사항
 
 
@@ -103,8 +114,14 @@
 
 # 기타
 ## 테스트 실행방법
-- business에 대한 테스트는 `\tests\test\integration_test`로 지정되어 있습니다. 해당 파일을 실행시키시면 pycharm기준 하단 파이썬 콘솔에 성공/실패여부가 자세하게 나옵니다.
-- api에 대한 테스트는 `\tests\api_test\FlaskTestCase`에 있습니다.
+- 주어진 코드는 pycharm에서 동작하도록 설계되어 있으며, pycharm에서 해당 소스로 이동 후 실행시 자동으로 테스트를 진행하도록 되어있습니다.
+- 만약 콘솔에서 테스트를 진행하고 싶다면 아래 사항을 따라 테스트 코드를 일부 수정해야합니다.
+  - 콘솔에서 파일을 실행시키는 위치는 `/week2`입니다. 
+  - ModuleNotFoundError 또는 ImportError발생시 import 구문을 아래와같이 수정합니다.
+```python
+from unittest import TestCase
+from ..main import run
+```
 - ![](../resource/img/test_screenshot1.png)
 - ![test_screenshot2.png](resource%2Fimg%2Ftest_screenshot2.png)
 ## Flask 실행 법
@@ -112,10 +129,6 @@
 api_dev/의 위치에서 flask run을 실행한다.
 만약 "You did not provide the "FLASK_APP" environment variable"과 같은 오류 발생시 환경변수 설정(하단)을 따른다
 ```
-
-### 환경변수 설정
-- https://teki.tistory.com/37
-- `set FLASK_APP = app`을 실행 한뒤 서버를 실행시킨다.
 
 ## FacadeJSON
 - 파이썬에서 JSON을 편하게 사용할 수 있도록 도와주는 (제작된)라이브러리
