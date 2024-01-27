@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/Users/cycrpto/Desktop/My Brain/1.Projects/산돌이/프리프로젝트/프로젝트 폴더/week2/api_dev/.venv/bin/python" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from flask.cli import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())

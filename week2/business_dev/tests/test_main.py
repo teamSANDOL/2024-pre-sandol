@@ -1,5 +1,5 @@
 from unittest import TestCase
-from week2.business_dev.main import run
+from ..main import run
 
 
 class TestCrawlingInfo(TestCase):
