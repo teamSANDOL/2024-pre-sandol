@@ -1,5 +1,8 @@
 from unittest import TestCase
-from ..main import run
+try:
+    from ..main import run
+except ImportError:
+    from week2.business_dev.main import run
 
 
 class TestCrawlingInfo(TestCase):
