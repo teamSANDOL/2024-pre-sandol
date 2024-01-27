@@ -27,6 +27,9 @@
 - 윈도우의 경우 [해당 링크](https://hcnoh.github.io/2019-06-19-windows-python-virtualenv)의 설명을 따른다.
 - 이후 app.py를 실행시키면 자동으로 서버가 실행될 것이다.
 
+```shell
+source .venv/bin/activate
+```
 
 #### 요구사항
 - 산돌이에 가장 인기 있는 기능인 "학식"은 산돌이 개발자가 직접 업주에게 연락하여 매일 수동으로 업데이트 하고 있다.
@@ -42,10 +45,33 @@
   - 업체의 메뉴가 저장된 파일에 이미 메뉴가 존재한다면 이전 메뉴를 모두 삭제한 뒤 새로운 데이터를 덮어쓴다.
   - 덮어쓰기에 성공했다면 성공메시지를 리턴한다.
 
-
-```shell
-source .venv/bin/activate
+#### 파일 구조
+```text
+.
+|-- __init__.py
+|-- app.py
+|-- docs
+|   `-- README.md
+|-- lib
+|   |-- __init__.py
+|   `-- frozen_json.py
+|-- repo
+|   `-- menu.json
+`-- tests
+    |-- __init__.py
+    |-- data
+    |   |-- correction_test.json
+    |   |-- diff_botid_test.json
+    |   |-- incorrect_store_name_test.json
+    |   `-- permission_test.json
+    `-- test_app.py
 ```
+- 위 파일 구조는 `api_dev`의 파일 구조이다.
+- `app.py` : Flask서버를 띄우는 엔트리포인트이다.
+- `\docs` : 작성해야하는 개발문서가 포함되어있다.
+- `\lib` : 사용할 수 있는 라이브러리가 들어있다.
+- `\repo` : 미션에서 요구하는 파일로, json이 저장되는 일종의 db 파일이다.
+- `\tests` : 테스트 파일과 테스트케이스들이 들어있으며, 미션 제출시 test_app.py를 실행시켜 성공시켜야 한다.
 
 #### 입력 예시
 ```text
