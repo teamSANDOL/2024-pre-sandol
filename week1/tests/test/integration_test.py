@@ -19,7 +19,7 @@ TEST_JSON_PATH = os.path.join(
 
 class Test(TestCase):
     def setUp(self):
-        with open(TEST_JSON_PATH, "r") as f:
+        with open(TEST_JSON_PATH, "r", encoding = "utf-8") as f:
             self.given_data = json.load(f)
 
     def test_app_main(self):
@@ -32,4 +32,4 @@ class Test(TestCase):
                      "developerMessage": "", "total": 0}
 
         given = app_main(test_json)
-        self.assertEquals(given['status'], "[Error] 데이터를 받아오지 못했습니다.")
+        self.assertEqual(given['status'], "[Error] 데이터를 받아오지 못했습니다.")
