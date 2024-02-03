@@ -34,12 +34,3 @@ class Test(TestCase):
         given = app_main(test_json)
         self.assertEquals(given['status'], "[Error] 데이터를 받아오지 못했습니다.")
 
-"""
-- 고민한 부분 & 공부해야 할 부분- 
-1. api를 따옴에 있어 사용할 url과 코드로 어떻게 끌어오는지에 대해
-2. 깃허브에 대해 친숙해져야... pull/push개념과 branch와 merge에 등등 대해..
-3. 코드를 짜보긴 했으나 어디에 넣어야 할지, 프로젝트의 구조와 깃허브에서 test, main에 대한 구분..
-4. 기존 status데이터와 요청한 데이터들과의 비교..? api로 실시간 정보를 따왔을 때 사용자가 요청한 정보와 비교하여 맞으면 정상출력 무엇인가 오류가 나면 오류메시지 등..
-
-
-"""
