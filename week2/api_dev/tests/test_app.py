@@ -15,7 +15,7 @@ class Test(TestCase):
         )
 
     def __common_request(self, path):
-        with open(os.path.join(self.base, path), "r") as f:
+        with open(os.path.join(self.base, path), "r", encoding="UTF-8") as f:
             test_data = json.load(f)
             response = self.app.post('/updateMenu',
                                      data=json.dumps(test_data),
@@ -58,10 +58,10 @@ class Test(TestCase):
             self.assertIn("[ERROR]", result_text)
 
     def test_result_file(self):
-        with open(os.path.join(self.base, "../..", "repo", "menu.json"), "r") as f:
+        with open(os.path.join(self.base, "../..", "repo", "menu.json"), "r", encoding="UTF-8") as f:
             load = json.load(f)
 
-        with open(os.path.join(self.base, "correction_test.json"), "r") as rf:
+        with open(os.path.join(self.base, "correction_test.json"), "r", encoding="UTF-8") as rf:
             res_load = json.load(rf)
 
         names = [store["name"] for store in load["store"]]
