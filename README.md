@@ -93,7 +93,7 @@ source .venv/bin/activate
     "params": {
       "store_name": "산돌 분식",
       "lunch_menu": "떡볶이, 순대, 튀김",
-      "dinner_list": "짜장면, 짬뽕국, 탕수육"
+      "dinner_menu": "짜장면, 짬뽕국, 탕수육"
     },
     "id": "bwjfe6fxc96ngv9ra6dddzah"
   }
@@ -104,20 +104,19 @@ source .venv/bin/activate
 #### 출력 예시
 ```json
 {
-  "response": {
-    "version": "2.0",
-    "template": {
-      "outputs": [
-        {
-          "simpleText": {
-            "text": "성공적으로 저장하였습니다",
-            "text": "[ERROR] 오류상황에 맞는 메시지 출력"
-          }
+  "version": "2.0",
+  "template": {
+    "outputs": [
+      {
+        "simpleText": {
+          "text": "성공적으로 저장하였습니다.",
+          "text": "[ERROR] 오류상황에 맞는 메시지 출력"
         }
-      ]
-    }
+      }
+    ]
   }
 }
+
 ```
 
 #### 파일 저장 예시
