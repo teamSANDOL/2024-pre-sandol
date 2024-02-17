@@ -23,3 +23,4 @@ if __name__ == "__main__":
 # 웹스크래핑 강의 들으며 전체적인 방법..?에 관해 공부했음
 # https://nomadcoders.co/python-for-beginners?gad_source=1&gclid=EAIaIQobChMIjojzzICyhAMVVtUWBR1pVwBJEAAYASAAEgLks_D_BwE
 # requests, beautifulSoup 등등에 관해 간단히 알아보고 응용해볼 수 있었다.
+
